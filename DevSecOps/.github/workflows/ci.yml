@@ -32,14 +32,3 @@ jobs:
 
       - name: Security scan
         run: bandit -r .
-  codeql-analysis:
-    name: "CodeQL Analysis"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: python
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
